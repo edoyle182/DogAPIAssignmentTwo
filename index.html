@@ -5,31 +5,41 @@
     <meta name="description" content="Thinkful Dog API Assignment One" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>Dog API Assignment #1</title>
+    <title>Dog API Assignment #2</title>
+    <script
+      src="https://code.jquery.com/jquery-3.3.1.js"
+      integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+      crossorigin="anonymous"
+    ></script>
     <link href="style.css" rel="stylesheet" type="text/css" />
   </head>
   <body>
-    <section id="container">
-      <h1>Dog API: Simple GET Request</h1>
+    <div class="container">
+      <h1>Dog API: Let's see some dogs!</h1>
       <hr />
-      <div id="input"></div>
-      <form id="dog-num-form">
-        <div class="form-group">
-          <h3>How many dog photos do you want (between 3-50)?</h3>
+
+      <section class="formGroup">
+        <h3>How many dogs would you like to see?</h3>
+        <form>
+          <label for="numOfDogs">Number Of Dogs (1-50): </label>
           <input
-            type="text"
-            id="num-dog"
-            class="form-control"
-            placeholder="Default Photo # is 3"
+            type="number"
+            name="numOfDogs"
+            placeholder="3"
+            min="1"
+            max="50"
             required
           />
-        </div>
-        <div class="button">
-          <input type="submit" id="get" value="Get Dog Photo!" />
-        </div>
-        <div class="dog-img-results"></div>
-      </form>
-    </section>
+          <button type="submit" name="submit" class="getDogsButton">
+            Get Dog Photo(s)!
+          </button>
+        </form>
+      </section>
+
+      <section class="results hidden">
+        <h2>Look at these pups!</h2>
+      </section>
+    </div>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="script.js"></script>
   </body>
