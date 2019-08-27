@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="description" content="Thinkful Dog API Assignment One" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Dog API Assignment #1</title>
+    <link href="style.css" rel="stylesheet" type="text/css" />
+  </head>
+  <body>
+    <section id="container">
+      <h1>Dog API: Simple GET Request</h1>
+      <hr />
+      <div id="input"></div>
+      <form id="dog-num-form">
+        <div class="form-group">
+          <h3>How many dog photos do you want (between 3-50)?</h3>
+          <input
+            type="text"
+            id="num-dog"
+            class="form-control"
+            placeholder="Default Photo # is 3"
+            required
+          />
+        </div>
+        <div class="button">
+          <input type="submit" id="get" value="Get Dog Photo!" />
+        </div>
+        <div class="dog-img-results"></div>
+      </form>
+    </section>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>
